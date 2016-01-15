@@ -1,4 +1,4 @@
-name rock.cpp
+name: rock.cpp
 
 imports:
     - github: rock-core/package_set
