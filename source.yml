@@ -1,7 +1,7 @@
 name rock.cpp
 
 imports:
-    - github: orocos-toolchain/autoproj
+    - github: rock-core/package_set
 
 version_control:
     - tools/.*:
