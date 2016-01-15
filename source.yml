@@ -1,0 +1,9 @@
+name rock.cpp
+
+imports:
+    - github: orocos-toolchain/autoproj
+
+version_control:
+    - tools/.*:
+      github: rock-core/$PACKAGE_BASENAME
+      branch: $ROCK_BRANCH
