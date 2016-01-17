@@ -5,5 +5,5 @@ imports:
 
 version_control:
     - tools/.*:
-      github: rock-core/$PACKAGE_BASENAME
+      github: rock-cpp/$PACKAGE_BASENAME
       branch: $ROCK_BRANCH
