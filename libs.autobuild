@@ -1,3 +1,4 @@
 cmake_package 'tools/orogen_cpp_proxies'
 cmake_package 'tools/orocos_cpp_base'
 cmake_package 'tools/orocos_cpp'
+cmake_package 'tools/smurf'
