@@ -1,0 +1,3 @@
+libdw:
+    debian,ubuntu:
+        default: libdw-dev
