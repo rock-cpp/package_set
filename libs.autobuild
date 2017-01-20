@@ -7,3 +7,36 @@ cmake_package 'tools/lib_init'
 cmake_package 'tools/smurf'
 cmake_package 'tools/backward'
 cmake_package 'gui/rock-display'
+cmake_package 'gui/rock_replay'
+
+
+import_package 'gui/qxt' do |pkg|   
+
+    def pkg.prepare
+        if not File.exists?(File.join(Autoproj.root_dir, 'install', 'log/gui', 'qxt-autobuild-stamp'))
+            super
+            progress_start "configuring package %s" do
+                in_dir(srcdir) do 
+        	       run('configure', './configure', '-prefix', File.join(Autoproj.root_dir, 'install'))
+            	   progress_done 'configured %s'
+    	        end 
+	        end
+        end
+    end
+
+    def pkg.install
+    	super
+    	in_dir(srcdir) do
+    		progress_start "building package %s" do
+    			run('build', Autobuild.tool(:make))
+    			progress_done 'built %s'
+    		end
+
+    		progress_start "installing %s" do
+    			run('install', Autobuild.tool(:make), 'install')
+    			progress_done 'installed %s'
+    		end
+       	end
+    end
+
+ end
