@@ -16,10 +16,6 @@ version_control:
       github: jmachowinski/$PACKAGE_BASENAME-cpp
       branch: master
 
-    - gui/qxt:
-      url: https://bitbucket.org/libqxt/libqxt.git
-      branch: master
-
     - gui/rock_replay:
       github: hemker/rock_replay
       branch: master
