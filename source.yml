@@ -9,6 +9,10 @@ version_control:
       github: rock-cpp/$PACKAGE_BASENAME
       branch: master
 
+    - tools/state_machine_tk:
+      github: rock-cpp/orogen-state_machine
+      branch: master
+
     - gui/.*:
       github: rock-cpp/$PACKAGE_BASENAME
       branch: master
