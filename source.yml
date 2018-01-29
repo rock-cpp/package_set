@@ -12,7 +12,4 @@ version_control:
     - gui/.*:
       github: rock-cpp/$PACKAGE_BASENAME
       branch: $ROCK_BRANCH
-
-    - tools/backward:
-      github: jmachowinski/$PACKAGE_BASENAME-cpp
       branch: master
