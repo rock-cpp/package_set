@@ -16,3 +16,8 @@ version_control:
     - gui/.*:
       github: rock-cpp/$PACKAGE_BASENAME
       branch: master
+
+    - gui/qgv:
+      github: nbergont/$PACKAGE_BASENAME
+      branch: master
+
