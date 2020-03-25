@@ -1,9 +1,12 @@
-cmake_package 'tools/orogen_cpp_proxies'
+cmake_package 'tools/orogen_cpp_proxies' do |pkg|
+    pkg.env_add_path 'OROGEN_PLUGIN_PATH', File.join(pkg.prefix, 'share','orogen','plugins')
+end
 cmake_package 'tools/orocos_cpp_base'
 cmake_package 'tools/orocos_cpp'
 cmake_package 'tools/orogen_model_exporter' do |pkg|
-	Autoproj.env_add_path 'PATH', File.join(pkg.srcdir, 'bin')
-    Autoproj.env_add_path 'RUBYLIB', File.join(pkg.srcdir, 'lib')
+    pkg.env_add_path 'PATH', File.join(pkg.srcdir, 'bin')
+    pkg.env_add_path 'RUBYLIB', File.join(pkg.srcdir, 'lib')
+    pkg.env_add_path 'OROGEN_PLUGIN_PATH', File.join(pkg.prefix, 'share','orogen','plugins')
 end
 cmake_package 'tools/lib_config'
 cmake_package 'tools/lib_init'
