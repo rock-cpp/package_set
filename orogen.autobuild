@@ -1,5 +1,5 @@
 orogen_package 'tools/rtt_introspection' do |pkg|
-    Autoproj.env_add_path 'RTT_COMPONENT_PATH', File.join(pkg.prefix, "lib/orocos/plugins")
+    pkg.env_add_path 'RTT_COMPONENT_PATH', File.join(pkg.prefix, 'lib','orocos','plugins')
 end
 
 orogen_package 'tools/state_machine_tk'
