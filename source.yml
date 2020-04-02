@@ -3,6 +3,7 @@ name: rock.cpp
 imports:
     - github: rock-core/package_set
     - github: rock-simulation/simulation-package_set
+    - github: rock-gui/osgviz-package_set
 
 version_control:
     - tools/.*:
