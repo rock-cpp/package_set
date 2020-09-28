@@ -8,7 +8,10 @@ cmake_package 'tools/orogen_model_exporter' do |pkg|
     pkg.env_add_path 'RUBYLIB', File.join(pkg.srcdir, 'lib')
     pkg.env_add_path 'OROGEN_PLUGIN_PATH', File.join(pkg.prefix, 'share','orogen','plugins')
 end
-cmake_package 'tools/lib_config'
+cmake_package 'tools/lib_config' do |pkg|
+    bin,_,_ = Rock.activate_python_path(pkg)
+    pkg.define "PYTHON_EXECUTABLE", bin if bin
+end
 cmake_package 'tools/lib_init'
 cmake_package 'tools/lib_init_optional'
 cmake_package 'tools/smurf'
