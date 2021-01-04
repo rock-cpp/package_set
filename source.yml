@@ -13,6 +13,10 @@ version_control:
       github: rock-cpp/orogen-state_machine
       branch: master
 
+    - tools/backward-cpp:
+      github: bombela/backward-cpp
+      tag: v1.5
+
     - gui/.*:
       github: rock-cpp/$PACKAGE_BASENAME
       branch: master
