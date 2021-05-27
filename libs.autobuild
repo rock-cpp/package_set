@@ -6,8 +6,14 @@ cmake_package 'tools/orocos_cpp'
 cmake_package 'tools/orogen_model_exporter' do |pkg|
     pkg.env_add_path 'PATH', File.join(pkg.srcdir, 'bin')
     pkg.env_add_path 'RUBYLIB', File.join(pkg.srcdir, 'lib')
-    pkg.env_add_path 'OROGEN_PLUGIN_PATH', File.join(pkg.prefix, 'share','orogen','plugins')
-    pkg.env_set 'OROGEN_MODEL_PATH', File.join(pkg.prefix, 'share', 'orogen', 'models')
+    
+    pluginpath = File.join(pkg.prefix, 'share','orogen','plugins')
+    FileUtils.mkdir_p pluginpath
+    pkg.env_add_path 'OROGEN_PLUGIN_PATH', pluginpath
+    
+    modelspath = File.join(pkg.prefix, 'share', 'orogen', 'models')
+    FileUtils.mkdir_p modelspath
+    pkg.env_set 'OROGEN_MODEL_PATH', modelspath
 end
 cmake_package 'tools/lib_config' do |pkg|
     bin,_,_ = Rock.activate_python_path(pkg)
