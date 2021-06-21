@@ -11,7 +11,7 @@ cmake_package 'tools/orogen_model_exporter' do |pkg|
     FileUtils.mkdir_p pluginpath
     pkg.env_add_path 'OROGEN_PLUGIN_PATH', pluginpath
     
-    modelspath = File.join(pkg.prefix, 'share', 'orogen', 'models')
+    modelspath = File.join(Autoproj.prefix, 'share', 'orogen', 'models')
     FileUtils.mkdir_p modelspath
     pkg.env_set 'OROGEN_MODEL_PATH', modelspath
 end
