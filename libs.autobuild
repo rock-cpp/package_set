@@ -20,7 +20,10 @@ cmake_package 'tools/lib_config' do |pkg|
     pkg.define "PYTHON_EXECUTABLE", bin if bin
 end
 cmake_package 'tools/lib_init'
+remove_from_default 'tools/lib_init'
 cmake_package 'tools/lib_init_optional'
+remove_from_default 'tools/lib_init_optional'
+
 cmake_package 'tools/smurf'
 cmake_package 'tools/state_machine'
 cmake_package 'tools/backward'
