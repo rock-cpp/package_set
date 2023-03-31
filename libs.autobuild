@@ -26,7 +26,6 @@ remove_from_default 'tools/lib_init_optional'
 
 cmake_package 'tools/smurf'
 cmake_package 'tools/state_machine'
-cmake_package 'tools/backward'
 cmake_package 'tools/backward-cpp'
 cmake_package 'gui/rock-display'
 cmake_package 'gui/rock_replay'
