@@ -16,6 +16,9 @@ version_control:
     - tools/backward-cpp:
       github: bombela/backward-cpp
       tag: v1.5
+      patches:
+       - $AUTOPROJ_SOURCE_DIR/patches/0001-add-pkg-config.patch
+       - $AUTOPROJ_SOURCE_DIR/patches/0002-fix-installation-of-backward_config.hpp.patch
 
     - gui/.*:
       github: rock-cpp/$PACKAGE_BASENAME
