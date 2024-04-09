@@ -2,3 +2,7 @@ libdw:
     debian,ubuntu:
         default: libdw-dev
     gentoo: dev-libs/elfutils
+
+libdwarf:
+    debian,ubuntu:
+    default: libdwarf-dev
