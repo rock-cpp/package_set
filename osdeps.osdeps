@@ -5,4 +5,4 @@ libdw:
 
 libdwarf:
     debian,ubuntu:
-    default: libdwarf-dev
+        default: libdwarf-dev
