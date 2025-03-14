@@ -5,4 +5,5 @@
   <url>https://github.com/nbergont/qgv.git</url>
   <depend package="qt4" optional="1" />
   <depend package="qt5" optional="1" />
+  <depend package="qt5xmlpatterns" optional="1" />
 </package>

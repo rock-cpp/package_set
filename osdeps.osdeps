@@ -6,3 +6,7 @@ libdw:
 libdwarf:
     debian,ubuntu:
         default: libdwarf-dev
+
+qt5xmlpatterns:
+    debian,ubuntu:
+        default: libqt5xmlpatterns5-dev
