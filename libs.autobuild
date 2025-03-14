@@ -31,7 +31,8 @@ cmake_package 'gui/rock-display'
 cmake_package 'gui/rock_replay'
 cmake_package 'gui/qgv'
 
-only_on(["22.04", "24.04"]) do
+
+only_on(["ubuntu", "22.04"]) || only_on(["ubuntu", "24.04"]) do
     remove_from_default 'tools/state_machine'
     remove_from_default 'gui/qgv'
 end
