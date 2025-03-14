@@ -3,4 +3,4 @@ orogen_package 'tools/rtt_introspection' do |pkg|
 end
 
 orogen_package 'tools/state_machine_tk'
-
+remove_from_default 'tools/state_machine_tk'
