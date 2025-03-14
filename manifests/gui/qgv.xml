@@ -1,0 +1,8 @@
+<package>
+  <description brief="Interactive Qt graphViz display"/>
+  <author></author>
+  <license>LGPL3</license>
+  <url>https://github.com/nbergont/qgv.git</url>
+  <depend package="qt4" optional="1" />
+  <depend package="qt5" optional="1" />
+</package>
