@@ -28,7 +28,10 @@ cmake_package 'tools/smurf'
 cmake_package 'tools/state_machine'
 remove_from_default 'tools/state_machine'
 cmake_package 'tools/backward-cpp'
-cmake_package 'gui/rock-display'
+cmake_package 'gui/rock-display' do |pkg|
+    pkg.env_add_path 'QT_PLUGIN_PATH', File.join(pkg.prefix, "lib", "qt")
+end
+
 cmake_package 'gui/rock_replay'
 cmake_package 'gui/qgv'
 remove_from_default 'gui/qgv'
